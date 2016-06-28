@@ -3,8 +3,14 @@
 
 AMQP.Queue.declare(channel, "hello")
 
-AMQP.Basic.publish(channel, "", "hello", "Hello World!")
+message =
+  case System.argv do
+    []    -> "Hello World!"
+    words -> Enum.join(words, " ")
+  end
 
-IO.puts " [x] Sent 'Hello World!'"
+AMQP.Basic.publish(channel, "", "hello", message, persistent: true)
+
+IO.puts " [x] Sent '#{message}!'"
 AMQP.Connection.close(connection)
 

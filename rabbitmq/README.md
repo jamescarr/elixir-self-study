@@ -1,20 +1,31 @@
 # RabbitmqTutorials
 
-**TODO: Add description**
+A quick run down of the tutorials at https://www.rabbitmq.com/tutorials/tutorial-two-elixir.html
 
 ## Installation
+Make sure you have docker running and docker-compose installed.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+```
+docker-compose up -d
+mix deps.get
+mix deps.compile
 
-  1. Add rabbitmq_tutorials to your list of dependencies in `mix.exs`:
+```
 
-        def deps do
-          [{:rabbitmq_tutorials, "~> 0.0.1"}]
-        end
+Now open two terminals... I prefer tmux with two panes but whatever
+works.
 
-  2. Ensure rabbitmq_tutorials is started before your application:
+In one run:
+```
+mix run receive.exs
 
-        def application do
-          [applications: [:rabbitmq_tutorials]]
-        end
+```
 
+And in the other run
+
+```
+mix run send.exs
+mix run send.exs "Another message!"
+
+
+```
