@@ -4,3 +4,9 @@ in Elixir. This project contains many many spikes at trying to
 understand different things in elixir. I may formalize this more later
 but this is really just a rough dump of everything I'm currently
 learning.
+
+
+## Important Libraries
+
+* [HTTPoison](https://github.com/edgurgel/httpoison) - http client for
+  elixir that seems really solid.
