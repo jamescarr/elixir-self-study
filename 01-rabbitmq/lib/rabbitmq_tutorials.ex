@@ -1,0 +1,2 @@
+defmodule RabbitmqTutorials do
+end
