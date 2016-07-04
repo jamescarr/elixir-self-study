@@ -5,6 +5,9 @@ understand different things in elixir. I may formalize this more later
 but this is really just a rough dump of everything I'm currently
 learning.
 
+## Links
+https://github.com/h4cc/awesome-elixir
+
 
 ## Important Libraries
 
